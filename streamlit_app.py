@@ -45,7 +45,7 @@ class CustomNERComponent:
 
 NER_processor = Processor('alvaroalon2/biobert_chemical_ner')
     
-spacy_pipe = spacy.load("en_core_sci_sm", exclude=["tok2vec", "lemmatizer"])
+spacy_pipe = spacy.load("en_core_web_sm", exclude=["tok2vec", "lemmatizer"])
 spacy_pipe.replace_pipe('ner','ner_custom')
 
 
