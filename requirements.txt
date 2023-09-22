@@ -7,3 +7,4 @@ spacy>=3
 scispacy
 pysolr~=3.9.0
 torch
+beautifulsoup4
