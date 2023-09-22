@@ -1,1 +1,1 @@
-from .NER_module import NER_processor, normalizer, spacy_pipeline
+from .NER_module import NER_processor, spacy_pipeline
