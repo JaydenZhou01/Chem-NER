@@ -2,10 +2,10 @@ streamlit
 seaborn
 matplotlib
 pandas
+scispacy
+spacy
 transformers>=4.5.0
-spacy>=3.4.4
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0-py3-none-any.whl#egg=en_core_web_sm==3.0.0
-scispacy==0.5.2
 pysolr~=3.9.0
 torch
 beautifulsoup4
