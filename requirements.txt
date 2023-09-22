@@ -1,0 +1,9 @@
+streamlit
+seaborn
+matplotlib
+pandas
+transformers>=4.5.0
+spacy>=3
+scispacy
+pysolr~=3.9.0
+torch
