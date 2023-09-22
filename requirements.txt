@@ -1,11 +1,12 @@
+python<=3.8
 streamlit
 seaborn
 matplotlib
 pandas
 transformers>=4.5.0
-spacy>=3
-scispacy
+spacy>=3.4.4
+https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.2.4/en_core_sci_sm-0.2.4.tar.gz 
+scispacy==0.5.2
 pysolr~=3.9.0
 torch
 beautifulsoup4
-https://s3-us-west-2.amazonaws.com/ai2-s2-scispacy/releases/v0.2.4/en_core_sci_sm-0.2.4.tar.gz 
