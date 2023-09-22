@@ -39,10 +39,9 @@ class CustomNERComponent:
 
 try:
     NER_processor = Processor('alvaroalon2/biobert_chemical_ner')
-    normalizer = Normalizer()
     
-    nlp = spacy.load("en_core_sci_sm", exclude=["tok2vec", "lemmatizer"])
-    nlp.replace_pipe('ner','ner_custom')
+    spacy_pipe = spacy.load("en_core_sci_sm", exclude=["tok2vec", "lemmatizer"])
+    spacy_pipe.replace_pipe('ner','ner_custom')
 
 except Exception as error:
     print(repr(error))

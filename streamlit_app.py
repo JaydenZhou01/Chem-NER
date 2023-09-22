@@ -6,7 +6,8 @@ from spacy import displacy
 from bs4 import BeautifulSoup
 import time
 
-from ChemNER import nlp, normalizer
+from ChemNER import spacy_pipe
+from ChemNER.processor import Normalizer
 
 def find_entity(ent_list, ent_name):
     for entity in ent_list:
@@ -52,11 +53,12 @@ if btn:
     st.markdown("## **🎈 Check & download results **")
     with st.spinner('Please wait...'):
         with st.expander("Labeled document", expanded=True):
-            doc = nlp(text)
+            doc = spacy_pipe(text)
             ner_result = displacy.render(doc, style='ent',
                                         options={"ents": ["CHEMICAL"], "colors": {"CHEMICAL":"linear-gradient(45deg,#51a8dd,#A5DEE4)"}})
             
             entities = [f.text for f in doc.ents if f.label_ == 'CHEMICAL']
+            normalizer = Normalizer()
             normalized_ents = normalizer.normalize_entities(entities)
 
             soup = BeautifulSoup(ner_result, 'html.parser')
