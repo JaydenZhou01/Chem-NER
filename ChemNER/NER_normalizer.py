@@ -3,8 +3,8 @@ import re
 import os
 
 class Normalizer:
-    def __init__(self):
-        self.solr_url = os.getenv('SOLR_URL','http://localhost:8983/solr/')
+    def __init__(self,solr_url=None):
+        self.solr_url = solr_url if solr_url else 'http://localhost:8983/solr/'
         try:
             self.solr_engine = pysolr.Solr(self.solr_url+'ner_chem', timeout=20)
         except ConnectionError as error:
